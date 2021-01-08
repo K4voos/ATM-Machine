@@ -12,14 +12,16 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        primaryStage.setResizable(false);
+        Parent root = FXMLLoader.load(getClass().getResource("/LogIn.fxml"));
         primaryStage.setTitle("Welcome to ATM machine");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
 
     public static void main(String[] args) throws IOException {
-        ATMMenu account = new ATMMenu();
-        account.getLogin();
+        launch(args);
+//        ATMMenu account = new ATMMenu();
+//        account.getLogin();
     }
 }

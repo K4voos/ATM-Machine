@@ -16,7 +16,7 @@
          <children>
             <ImageView fitHeight="300.0" fitWidth="210.0" layoutX="1.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/ATM-Decals.jpg" />
+                  <Image url="@../../../resources/ATM-Decals.jpg" />
                </image>
             </ImageView>
          </children>
