@@ -1,5 +1,9 @@
 package com.ATMMachine;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,10 +13,10 @@ public class ATMMenu extends Account {
     Scanner sc = new Scanner(System.in);
 
     int userInput = 0;
-    HashMap<Integer, Integer> data = new HashMap<>();
+    HashMap<Integer, Integer> data = new HashMap<>(); //customer number and pin number respectively
     HashMap<Integer, String> names = new HashMap<>();
 
-    public void getLogin() throws IOException {
+    public void getLogin(int customerNumber, int PINNumber) throws IOException {
         int x = 1;
         data.put(123456, 123);
         data.put(987654, 987);
@@ -20,8 +24,8 @@ public class ATMMenu extends Account {
         names.put(987654, "Majid");
 
         System.out.println("Welcome to ATM Project");
-        do {
-            try {
+        //do {
+            /*try {
                 System.out.println("Enter your customer number: ");
                 setCustomerNumber(sc.nextInt());
 
@@ -30,20 +34,26 @@ public class ATMMenu extends Account {
             } catch (Exception e) {
                 System.out.println("\nInvalid characters. Only numbers are allowed.\n");
                 x = 2;
-            }
+            }*/
 
             for (Map.Entry<Integer, Integer> entry : data.entrySet()) {
-                if (entry.getKey() == getCustomerNumber() && entry.getValue() == getPIN()) {
-                    for (Map.Entry<Integer, String> name : names.entrySet()) {
+                if (entry.getKey() == customerNumber && entry.getValue() == PINNumber) {
+                    Main.changeScene("/GetAccount.fxml");
+
+                    // this for loop is to find customer name and welcome them
+                    /*for (Map.Entry<Integer, String> name : names.entrySet()) {
                         if (name.getKey().equals(entry.getKey())) {
-                            System.out.println("Welcome dear " + name.getValue());
+                            //todo welcome user in account screen
+                            LogInController.setAlertText("Welcome dear" + entry.getValue());
+
                         }
-                    }
-                    getAccountType();
+                    }*/
                 }
             }
-            System.out.println("Wrong customer or PIN number.");
-        } while (x == 1);
+
+            //todo check what happens if customer and PIN number are wrong
+            //System.out.println("Wrong customer or PIN number.");
+        //} while (x == 1);
 
     }
 
@@ -65,11 +75,11 @@ public class ATMMenu extends Account {
                 break;
             case 3:
                 System.out.println("Thank you and have a good time.");
-                try {
+                /*try {
                     getLogin();
                 } catch (IOException e) {
                     e.printStackTrace();
-                }
+                }*/
                 break;
             default:
                 System.out.println("Invalid choice.");
@@ -112,11 +122,11 @@ public class ATMMenu extends Account {
                 break;
             case 5:
                 System.out.println("Thank you and have a good time.");
-                try {
+                /*try {
                     getLogin();
                 } catch (IOException e) {
                     e.printStackTrace();
-                }
+                }*/
             default:
                 System.out.println("Invalid choice.");
                 getSaving();
@@ -158,11 +168,11 @@ public class ATMMenu extends Account {
                 break;
             case 5:
                 System.out.println("Thank you and have a good time.");
-                try {
+                /*try {
                     getLogin();
                 } catch (IOException e) {
                     e.printStackTrace();
-                }
+                }*/
                 break;
             default:
                 System.out.println("Invalid choice.");
