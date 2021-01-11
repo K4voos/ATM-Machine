@@ -14,6 +14,7 @@ public class LogInController {
     public Button logInBTN;
     public PasswordField pinFIELD;
     public TextField cNumTEXTFIELD;
+    @FXML
     public static Label alertText;
 
     public static void setAlertText(String text) {
@@ -22,13 +23,20 @@ public class LogInController {
 
     @FXML
     public void logInOnClick() throws IOException {
-        int customerNumber = Integer.parseInt(cNumTEXTFIELD.getText());
-        int PINNumber = Integer.parseInt(pinFIELD.getText());
+//        System.out.println("logInOnClick loaded");
 
-        /*if () {
-            alertText.setText("Invalid Characters");
-            cNumTEXTFIELD.setText("");
-        }*/
+        int customerNumber = 0;
+        int PINNumber = 0;
+
+        try {
+            customerNumber = Integer.parseInt(cNumTEXTFIELD.getText());
+            PINNumber = Integer.parseInt(pinFIELD.getText());
+        } catch (Exception e) {
+            if (cNumTEXTFIELD.getText() == null || pinFIELD.getText() == null) {
+                setAlertText("Please Enter your log in information");
+                logInOnClick();
+            }
+        }
 
         ATMMenu atmMenu = new ATMMenu();
         atmMenu.getLogin(customerNumber, PINNumber);
