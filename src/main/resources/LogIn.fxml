@@ -12,18 +12,18 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ATMMachine.LogInController">
    <left>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #eeeeee;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f5e9eb;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="300.0" fitWidth="210.0" layoutX="1.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@ATM-Decals.jpg" />
+                  <Image url="@Logo.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="400.0" prefWidth="411.0" style="-fx-background-color: #eeeeee;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="411.0" style="-fx-background-color: #f5e9eb;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="67.0" layoutY="43.0" text="Welcome to my ATM machine">
                <font>
@@ -43,7 +43,7 @@
             <TextField fx:id="cNumTEXTFIELD" layoutX="164.0" layoutY="183.0" prefHeight="25.0" prefWidth="200.0" promptText="Customer Number" />
             <PasswordField fx:id="pinFIELD" layoutX="164.0" layoutY="214.0" prefHeight="25.0" prefWidth="200.0" promptText="PIN Number" />
             <Label layoutX="51.0" layoutY="103.0" text="Please enter your customer and PIN numbers to log in" />
-            <Button fx:id="logInBTN" layoutX="236.0" layoutY="283.0" mnemonicParsing="false" onAction="#logInOnClick" text="Log In">
+            <Button fx:id="logInBTN" layoutX="236.0" layoutY="283.0" mnemonicParsing="false" onAction="#logInOnClick" style="-fx-background-color: #a8475a;" text="Log In" textFill="#e4dcdc">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
