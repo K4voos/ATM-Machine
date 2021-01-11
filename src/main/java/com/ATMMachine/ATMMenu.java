@@ -48,7 +48,7 @@ public class ATMMenu extends Account {
 
                         }
                     }*/
-                }
+                } 
             }
 
             //todo check what happens if customer and PIN number are wrong

@@ -15,15 +15,14 @@ public class LogInController {
     public PasswordField pinFIELD;
     public TextField cNumTEXTFIELD;
     @FXML
-    public static Label alertText;
+    public Label alertText;
 
-    public static void setAlertText(String text) {
+    public void setAlertText(String text) {
         alertText.setText(text);
     }
 
     @FXML
     public void logInOnClick() throws IOException {
-//        System.out.println("logInOnClick loaded");
 
         int customerNumber = 0;
         int PINNumber = 0;
@@ -32,10 +31,7 @@ public class LogInController {
             customerNumber = Integer.parseInt(cNumTEXTFIELD.getText());
             PINNumber = Integer.parseInt(pinFIELD.getText());
         } catch (Exception e) {
-            if (cNumTEXTFIELD.getText() == null || pinFIELD.getText() == null) {
                 setAlertText("Please Enter your log in information");
-                logInOnClick();
-            }
         }
 
         ATMMenu atmMenu = new ATMMenu();
