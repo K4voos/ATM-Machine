@@ -31,9 +31,10 @@ public class LogInController {
             customerNumber = Integer.parseInt(cNumTEXTFIELD.getText());
             PINNumber = Integer.parseInt(pinFIELD.getText());
         } catch (Exception e) {
-                setAlertText("Please Enter your log in information");
+                setAlertText("Invalid customer and/or PIN number");
         }
 
+        if (ATMMenu.text != null) setAlertText(ATMMenu.text);
         ATMMenu atmMenu = new ATMMenu();
         atmMenu.getLogin(customerNumber, PINNumber);
     }

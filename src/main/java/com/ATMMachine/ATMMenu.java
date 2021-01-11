@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class ATMMenu extends Account {
+
+    static String text;
     Scanner sc = new Scanner(System.in);
 
     int userInput = 0;
@@ -48,13 +50,10 @@ public class ATMMenu extends Account {
 
                         }
                     }*/
-                } 
+                } else { //todo separate empty fields and wrong log in info
+                    text = "Invalid customer and/or PIN number";
+                }
             }
-
-            //todo check what happens if customer and PIN number are wrong
-            //System.out.println("Wrong customer or PIN number.");
-        //} while (x == 1);
-
     }
 
     private void getAccountType() {
