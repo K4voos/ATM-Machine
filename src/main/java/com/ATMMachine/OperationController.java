@@ -15,6 +15,7 @@ public class OperationController {
     public Label alertText;
     public Button transferBTN;
     public Button changeAccBTN;
+    public Button viewBalanceBTn;
 
     public void depoOnClick(ActionEvent event) {
     }
@@ -32,5 +33,8 @@ public class OperationController {
 
     public void changeAccOnClick(ActionEvent event) throws IOException {
         Main.changeScene("/GetAccount.fxml");
+    }
+
+    public void viewBalanceOnClick(ActionEvent event) {
     }
 }
