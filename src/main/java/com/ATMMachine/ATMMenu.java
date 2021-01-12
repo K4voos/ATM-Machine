@@ -1,9 +1,5 @@
 package com.ATMMachine;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +7,8 @@ import java.util.Scanner;
 
 public class ATMMenu extends Account {
 
-    static String text;
+    static String alertMessage;
+    static String nameMessage;
     Scanner sc = new Scanner(System.in);
 
     int userInput = 0;
@@ -26,32 +23,21 @@ public class ATMMenu extends Account {
         names.put(987654, "Majid");
 
         System.out.println("Welcome to ATM Project");
-        //do {
-            /*try {
-                System.out.println("Enter your customer number: ");
-                setCustomerNumber(sc.nextInt());
-
-                System.out.println("Enter your PIN number: ");
-                setPIN(sc.nextInt());
-            } catch (Exception e) {
-                System.out.println("\nInvalid characters. Only numbers are allowed.\n");
-                x = 2;
-            }*/
 
             for (Map.Entry<Integer, Integer> entry : data.entrySet()) {
                 if (entry.getKey() == customerNumber && entry.getValue() == PINNumber) {
                     Main.changeScene("/GetAccount.fxml");
 
                     // this for loop is to find customer name and welcome them
-                    /*for (Map.Entry<Integer, String> name : names.entrySet()) {
+                    for (Map.Entry<Integer, String> name : names.entrySet()) {
                         if (name.getKey().equals(entry.getKey())) {
                             //todo welcome user in account screen
-                            LogInController.setAlertText("Welcome dear" + entry.getValue());
-
+                            nameMessage = "Logged in as: " + entry.getValue();
+                            break;
                         }
-                    }*/
+                    }
                 } else { //todo separate empty fields and wrong log in info
-                    text = "Invalid customer and/or PIN number";
+                    alertMessage = "Invalid customer and/or PIN number";
                 }
             }
     }
