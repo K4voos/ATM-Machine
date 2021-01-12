@@ -1,6 +1,5 @@
 package com.ATMMachine;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -34,7 +33,7 @@ public class LogInController {
                 setAlertText("Invalid customer and/or PIN number");
         }
 
-        if (ATMMenu.text != null) setAlertText(ATMMenu.text);
+        if (ATMMenu.alertMessage != null) setAlertText(ATMMenu.alertMessage);
         ATMMenu atmMenu = new ATMMenu();
         atmMenu.getLogin(customerNumber, PINNumber);
     }
