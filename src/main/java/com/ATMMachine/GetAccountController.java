@@ -1,6 +1,5 @@
 package com.ATMMachine;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -24,21 +23,21 @@ public class GetAccountController {
     }
 
     @FXML
-    public void checkAccOnClick(ActionEvent event) throws IOException {
+    public void checkAccOnClick() throws IOException {
         accountType = "Check";
 
         Main.changeScene("/Operation.fxml");
     }
 
     @FXML
-    public void savingAccOnClick(ActionEvent event) throws IOException {
+    public void savingAccOnClick() throws IOException {
         accountType = "Saving";
 
         Main.changeScene("/Operation.fxml");
     }
 
     @FXML
-    public void logOutOnClick(ActionEvent event) throws IOException {
+    public void logOutOnClick() throws IOException {
         Main.changeScene("/LogIn.fxml");
     }
 }

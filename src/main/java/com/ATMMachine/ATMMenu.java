@@ -3,20 +3,16 @@ package com.ATMMachine;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class ATMMenu extends Account {
 
     static String alertMessage;
     static String nameMessage;
-    Scanner sc = new Scanner(System.in);
 
-    int userInput = 0;
     HashMap<Integer, Integer> data = new HashMap<>(); //customer number and pin number respectively
     HashMap<Integer, String> names = new HashMap<>();
 
     public void getLogin(int customerNumber, int PINNumber) throws IOException {
-        int x = 1;
         data.put(123456, 123);
         data.put(987654, 987);
         names.put(123456, "Jafar");

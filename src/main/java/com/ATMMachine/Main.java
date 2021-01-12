@@ -27,7 +27,7 @@ public class Main extends Application {
         stage.getScene().setRoot(parent);
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         launch(args);
     }
 }
