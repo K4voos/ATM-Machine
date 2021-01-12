@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ATMMachine.OperationController">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f5e9eb;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="300.0" fitWidth="210.0" layoutX="1.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Logo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="400.0" prefWidth="411.0" style="-fx-background-color: #f5e9eb;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="67.0" layoutY="85.0" text="Welcome to our ATM machine" textFill="#35151d">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label contentDisplay="CENTER" layoutX="77.0" layoutY="127.0" text="Please select the account you want to access" textAlignment="CENTER" textFill="#35151d" />
+                <ImageView fitHeight="84.0" fitWidth="86.0" layoutX="153.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@AccIcon.png" />
+                    </image>
+                </ImageView>
+            <Button fx:id="depoBTN" layoutX="67.0" layoutY="200.0" mnemonicParsing="false" onAction="#depoOnClick" prefWidth="100.0" style="-fx-background-color: #a3495b;" text="Deposit" textFill="#f3ebeb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="withdrawBTN" layoutX="226.0" layoutY="200.0" mnemonicParsing="false" onAction="#withdrawOnClick" prefWidth="100.0" style="-fx-background-color: #a3495b;" text="Withdraw" textFill="#f3ebeb">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Button>
+            <Button fx:id="logOutBTN" layoutX="264.0" layoutY="347.0" mnemonicParsing="false" onAction="#logOutOnClick" style="-fx-background-color: #a3495b;" text="Log Out" textFill="#f3ebeb">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="alertText" alignment="CENTER" contentDisplay="CENTER" layoutY="162.0" prefHeight="17.0" prefWidth="389.0" textAlignment="CENTER" textFill="#16bc00" />
+            <Button fx:id="transferBTN" layoutX="67.0" layoutY="239.0" mnemonicParsing="false" onAction="#transferOnClick" prefWidth="100.0" style="-fx-background-color: #a3495b;" text="Transfer" textFill="#f3ebeb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="changeAccBTN" layoutX="142.0" layoutY="347.0" mnemonicParsing="false" onAction="#changeAccOnClick" style="-fx-background-color: #a3495b;" text="Change Account" textFill="#f3ebeb">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
